@@ -14,7 +14,7 @@ def replace_escape_sequence(text):
 
 # title -> Must Unique
 def assemble(title: str, prefix: list, code: list, description: str):
-    if type(prefix) == str: prefix = [x for x in prefix.strip().split(',') if x]
+    if type(prefix) == str: prefix = [x.strip() for x in prefix.strip().split(',') if x]
     if type(code) == str: code = [code]
 
     assert type(title) == str
