@@ -12,7 +12,7 @@ def make_readme():
 
     print("# Snippet For VScode\n")
     for key, value in info.items():
-        print("## Key")
+        print(f"## {Key}")
         for x in value:
             print(f"- {x}")
         print()
