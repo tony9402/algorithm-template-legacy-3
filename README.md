@@ -1,18 +1,18 @@
 # Snippet For VScode
 
-## data_structure
-- segment_tree_with_lazy_prop
-- segment_tree
+## Data Structure
+- [Segment Tree With Lazy Prop](src/data_structure/segment_tree_with_lazy_prop.cpp)
+- [Segment Tree](src/data_structure/segment_tree.cpp)
 
-## string
-- suffixarray
+## String
+- [Suffix Array](src/string/suffix_array.cpp)
 
-## math
-- power
+## Math
+- [Power](src/math/power.cpp)
 
-## utils
-- main
+## Utils
+- [Main](src/utils/main.cpp)
 
-## graph
-- graph
+## Graph
+- [Graph](src/graph/graph.cpp)
 
