@@ -17,9 +17,9 @@ jobs:
           python-version: '3.x'
           architecture: 'x64'
       - name: Run assemble.py
-        run: python3 scripts/assemble.py
+        run: python3 script/assemble.py
       - name: Run auto_readme_update.py
-        run: python3 scripts/auto_readme_update.py > README.md
+        run: python3 script/auto_readme_update.py > README.md
       - name: Add and Commit
         uses: EndBug/add-and-commit@v9
         with:
