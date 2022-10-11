@@ -1,7 +1,7 @@
 # Snippet For VScode
 
 ## Data Structure
-- [Segment Tree With Lazy Prop](src/data_structure/segment_tree_with_lazy_prop.cpp)
+- [Segment Tree With Lazy Propagation](src/data_structure/segment_tree_with_lazy_propagation.cpp)
 - [Segment Tree](src/data_structure/segment_tree.cpp)
 
 ## String
