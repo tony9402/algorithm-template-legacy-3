@@ -1,6 +1,6 @@
-//title: SuffixArray(Nlog^2N)
+//title: SuffixArray(Nlog^2N) (With LCP)
 //prefix: sa, suffixarray
-//description: Suffix Array O(Nlog^2N)
+//description: Suffix Array with LCP O(Nlog^2N)
 template<typename T> struct SuffixArrayLCP { // O(Nlog^2N)
     vector<int> sa, pos, tmp, lcp;
     SuffixArray(const T& S) {
