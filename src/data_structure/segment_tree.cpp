@@ -18,5 +18,6 @@ template<typename T> struct Segment {
         int mid = (l + r) / 2;
         return merge(query(l, mid, s, e, pos << 1), query(mid + 1, r, s, e, pos << 1 | 1));
     }
+    T query(int s, int e) { return query(0, siz - 1, s, e, 1); }
     T merge(T a, T b) { return a + b; }
 };
