@@ -1,0 +1,114 @@
+{
+    "Segment Tree": {
+        "prefix": [
+            "segtree",
+            "seg"
+        ],
+        "body": [
+            "template<typename T> struct Segment {",
+            "    vector<T> tree;",
+            "    int siz;",
+            "    Segment(int N = 1 << 17) {",
+            "        for(siz = 1; siz <= N; siz <<= 1);",
+            "        tree.resize(siz << 1);",
+            "    }",
+            "    void update(int idx, T data) {",
+            "        tree[idx += siz] = data;",
+            "        while(idx >>= 1) tree[idx] = merge(tree[idx << 1], tree[idx << 1 | 1]);",
+            "    }",
+            "    T query(int l, int r, int s, int e, int pos) {",
+            "        if(s <= l && r <= e) return tree[pos];",
+            "        if(e < l || r < s) return 0;",
+            "        int mid = (l + r) / 2;",
+            "        return merge(query(l, mid, s, e, pos << 1), query(mid + 1, r, s, e, pos << 1 | 1));",
+            "    }",
+            "    T merge(T a, T b) { return a + b; }",
+            "};"
+        ],
+        "description": "Segment Tree"
+    },
+    "SuffixArray(Nlog^2N) (With LCP)": {
+        "prefix": [
+            "sa",
+            "suffixarray"
+        ],
+        "body": [
+            "template<typename T> struct SuffixArrayLCP { // O(Nlog^2N)",
+            "    vector<int> sa, pos, tmp, lcp;",
+            "    SuffixArray(const T& S) {",
+            "        int N = (int)S.size();",
+            "        sa = pos = tmp = vector<int>(N);",
+            "        for(int i = 0; i < N; ++i) sa[i] = i, pos[i] = S[i];",
+            "        for(int d = 1; ; d <<= 1) {",
+            "            function<bool(int, int)> cmp = [&](int a, int b) -> bool {",
+            "                if(pos[a] != pos[b]) return pos[a] < pos[b];",
+            "                if(a + d < N && b + d < N) return pos[a + d] < pos[b + d];",
+            "                return a > b;",
+            "            };",
+            "            sort(sa.begin(), sa.end(), cmp);",
+            "            for(int i = 1; i < N; ++i) tmp[i] = tmp[i - 1] + cmp(sa[i - 1], sa[i]);",
+            "            for(int i = 0; i < N; ++i) pos[sa[i]] = tmp[i];",
+            "        }",
+            "        buildLCP(S);",
+            "    }",
+            "    void buildLCP(const T& S) {",
+            "        for(int i = 0, k = 0; i < N; ++i, k = max(0, k - 1)) {",
+            "            while(sa[pos[i] - 1] + k < N && sa[pos[i]] + k < N && S[sa[pos[i] - 1] + k] == S[sa[pos[i]] + k]) ++k;",
+            "            lcp[pos[i]] = k;",
+            "        }",
+            "    }",
+            "};"
+        ],
+        "description": "Suffix Array with LCP O(Nlog^2N)"
+    },
+    "a^b with modulo": {
+        "prefix": [
+            "power"
+        ],
+        "body": [
+            "template<typename T> T power(T a, T b, T mod) {",
+            "    if(b == 0) return 1;",
+            "    if(b & 1) return a * power(a, b - 1, mod) % mod;",
+            "    return power(a * a % mod, b >> 1, mod);",
+            "}"
+        ],
+        "description": "a^b % mod"
+    },
+    "Testcase Basic Main": {
+        "prefix": [
+            "tcmain",
+            "ma"
+        ],
+        "body": [
+            "#include<bits/stdc++.h>",
+            "",
+            "using namespace std;",
+            "",
+            "int main() {",
+            "    ios::sync_with_stdio(false);",
+            "    cin.tie(0);",
+            "",
+            "    int testcase = $1;$2 cin >> testcase;",
+            "    while(~--testcase) {",
+            "        $3",
+            "    }",
+            "}"
+        ],
+        "description": "Main Template for Testcase"
+    },
+    "Graph Basic Tempalte": {
+        "prefix": [
+            "graph"
+        ],
+        "body": [
+            "template<typename T> struct Graph {",
+            "    vector<vector<T>> G;",
+            "    Graph(int N) { G.resize(N + 1); }",
+            "    void addEdge(int u, T data) { G[u].emplace_back(data); }",
+            "    int size() { return (int)G.size(); }",
+            "    vector<T>& operator[](const int &idx) { return G[idx]; }",
+            "};"
+        ],
+        "description": "Graph"
+    }
+}
