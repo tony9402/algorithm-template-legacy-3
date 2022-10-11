@@ -1,17 +1,18 @@
 # Snippet For VScode
 
-## Key
+## data_structure
+- segment_tree_with_lazy_prop
 - segment_tree
 
-## Key
+## string
 - suffixarray
 
-## Key
+## math
 - power
 
-## Key
+## utils
 - main
 
-## Key
+## graph
 - graph
 
