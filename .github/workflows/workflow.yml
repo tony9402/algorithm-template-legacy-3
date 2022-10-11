@@ -25,9 +25,7 @@ jobs:
           author_name: tony9402
           author_email: tony9402@naver.com
           message: '[Auto UPD] Make cpp.json'
-          add:
-            - 'cpp.json'
-            - 'README.md'
+          add: '*.*'
       - name: Push
         uses: ad-m/github-push-action@master
         with:
