@@ -1,3 +1,6 @@
+//title: Segment Tree With Lazy Propagation
+//prefix: seglazy, segmentlazy
+//description: Segment Tree with Lazy Propagation
 template<typename T> struct SegmentLazy {
     vector<T> tree;
     vector<T> lazy;
