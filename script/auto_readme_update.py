@@ -9,6 +9,8 @@ def make_readme():
         if dep[0] not in info:
             info[dep[0]] = list()
         info[dep[0]].append(dep[1])
+
+    print("# Snippet For VScode\n")
     for key, value in info.items():
         print("## Key")
         for x in value:
