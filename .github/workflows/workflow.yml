@@ -2,6 +2,7 @@ name: Make cpp.json and README
 
 on:
   push:
+    branch: 'main'
     paths:
       - '**.cpp'
 
