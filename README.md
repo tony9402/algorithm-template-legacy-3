@@ -12,6 +12,7 @@
 
 ## Miscellaneous
 - [Main](src/miscellaneous/main.cpp)
+- [Fast Input](src/miscellaneous/fast_input.cpp)
 
 ## Graph
 - [Graph](src/graph/graph.cpp)
