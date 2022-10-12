@@ -1,4 +1,4 @@
 //title: range all
 //prefix: all
 //description: range all
-$TM_SELECTED_TEXT.begin(), $TM_SELECTED_TEXT.end()
+$1.begin(), $1.end()
