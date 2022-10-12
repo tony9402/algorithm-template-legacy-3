@@ -6,6 +6,7 @@
 
 ## String
 - [Suffix Array](src/string/suffix_array.cpp)
+- [Hashing](src/string/hashing.cpp)
 
 ## Math
 - [Power](src/math/power.cpp)
