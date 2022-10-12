@@ -7,6 +7,7 @@
 
 ## String
 - [Suffix Array](src/string/suffix_array.cpp)
+- [Kmp](src/string/kmp.cpp)
 - [Hashing](src/string/hashing.cpp)
 
 ## Math
