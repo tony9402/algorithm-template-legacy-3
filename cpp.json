@@ -320,8 +320,8 @@
             "compress"
         ],
         "body": [
-            "sort($TM_SELECTED_TEXT.begin(), $TM_SELECTED_TEXT.end());",
-            "$TM_SELECTED_TEXT.erase(unique($TM_SELECTED_TEXT.begin(),$TM_SELECTED_TEXT.end()), $TM_SELECTED_TEXT.end());"
+            "sort($1.begin(), $1.end());",
+            "$1.erase(unique($1.begin(),$1.end()), $1.end());"
         ],
         "description": "Value Compress"
     },
@@ -330,7 +330,7 @@
             "all"
         ],
         "body": [
-            "$TM_SELECTED_TEXT.begin(), $TM_SELECTED_TEXT.end()"
+            "$1.begin(), $1.end()"
         ],
         "description": "range all"
     },
