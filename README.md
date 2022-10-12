@@ -21,5 +21,6 @@
 - [All](src/miscellaneous/all.cpp)
 
 ## Graph
+- [Floyd](src/graph/floyd.cpp)
 - [Graph](src/graph/graph.cpp)
 
