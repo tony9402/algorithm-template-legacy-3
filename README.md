@@ -2,6 +2,7 @@
 
 ## Data Structure
 - [Segment Tree With Lazy Propagation](src/data_structure/segment_tree_with_lazy_propagation.cpp)
+- [Fenwick Tree](src/data_structure/fenwick_tree.cpp)
 - [Segment Tree](src/data_structure/segment_tree.cpp)
 
 ## String
