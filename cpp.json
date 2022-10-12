@@ -214,6 +214,25 @@
         ],
         "description": "fast input"
     },
+    "Value Compress": {
+        "prefix": [
+            "compress"
+        ],
+        "body": [
+            "sort($TM_SELECTED_TEXT.begin(), $TM_SELECTED_TEXT.end());",
+            "$TM_SELECTED_TEXT.erase(unique($TM_SELECTED_TEXT.begin(),$TM_SELECTED_TEXT.end()), $TM_SELECTED_TEXT.end());"
+        ],
+        "description": "Value Compress"
+    },
+    "range all": {
+        "prefix": [
+            "all"
+        ],
+        "body": [
+            "$TM_SELECTED_TEXT.begin(), $TM_SELECTED_TEXT.end()"
+        ],
+        "description": "range all"
+    },
     "Graph Basic Tempalte": {
         "prefix": [
             "graph"
