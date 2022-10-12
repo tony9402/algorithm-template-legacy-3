@@ -10,8 +10,8 @@
 ## Math
 - [Power](src/math/power.cpp)
 
-## Utils
-- [Main](src/utils/main.cpp)
+## Miscellaneous
+- [Main](src/miscellaneous/main.cpp)
 
 ## Graph
 - [Graph](src/graph/graph.cpp)
