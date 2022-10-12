@@ -3,7 +3,7 @@ from glob import glob
 
 def convert(text):
     text = [
-        word.lower().replace(word[0], word[0].upper(), 1)
+        word.replace(word[0], word[0].upper(), 1)
         for word in text.split('_')
     ]
     return " ".join(text)
