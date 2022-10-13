@@ -3,7 +3,7 @@
 //description: Heavy-Ligth Decomposition Query O(log^2N)
 struct HLD {
     Graph<int> G;
-    vector<int> par, top, dep, siz, in, out, top;
+    vector<int> par, top, dep, siz, in, out;
     $1
     int id;
     HLD(Graph<int> G):G(G) {
