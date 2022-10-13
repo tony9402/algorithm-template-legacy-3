@@ -22,10 +22,7 @@ def assemble(title: str, prefix: list, code: list, description: str):
     assert type(code) == list
     assert type(description) == str
     
-    code = [
-        f"{replace_escape_sequence(x.rstrip())}"
-        for x in code
-    ]
+    code = [ x.rstrip() for x in code ]
     value = {
         "prefix": prefix,
         "body": code,
