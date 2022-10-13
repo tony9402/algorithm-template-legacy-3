@@ -28,11 +28,11 @@ template<int fp=0> struct fastio { fastio() { ios::sync_with_stdio(false); cin.t
 
 template<typename InputType> void in(InputType& x) { cin>>x; }
 template<typename InputType, typename... InputTypes> void in(InputType& x, InputTypes& ...y) { cin>>x; in(y...); }
-template<typename IterableType> inline istream& operator>>(istream &in, IterableType &x) { for(auto &y: x) in>>y; return in; }
+template<typename IterableInputType> void vin(IterableInputType &V) { for(auto &x: V) cin >> x; }
 
 template<const int p=0, typename OutputType> void out(OutputType x) { cout<<x<<' '; }
 template<const int p=0, typename OutputType, typename... OutputTypes> void out(OutputType x, OutputTypes ...y) { cout<<fixed<<setprecision(p)<<x<<' '; out<p>(y...); }
-template<typename IterableType> inline ostream& operator<<(ostream &out, IterableType &x) { for(const auto &y: x) out<<y<<' '; return out; }
+template<const int p=0, typename IterableOutputType> void vout(const IterableOutputType &V) { for(auto &x: V) out<p>(x); }
 
 template<i64 modulo=numeric_limits<i64>::max(), typename... T> i64 Sum(T... x) { return (... + x) % modulo; }
 template<i64 modulo=numeric_limits<i64>::max(), typename... T> i64 Mul(T... x) { return (... * x) % modulo; }
