@@ -13,15 +13,15 @@ template<typename T> struct SegmentLazy {
     void propagate(int l, int r, int pos) {
         if(!lazy[pos]) return;
         if(l != r) {
-            lazy[pos << 1] = lazy[pos];
-            lazy[pos << 1 | 1] = lazy[pos];
+            lazy[pos << 1] += lazy[pos];
+            lazy[pos << 1 | 1] += lazy[pos];
         }
-        tree[pos] = (r - l + 1) * lazy[pos];
+        tree[pos] += (r - l + 1) * lazy[pos];
         lazy[pos] = 0;
     }
     void update(int l, int r, int s, int e, int pos, T data) {
         if(s <= l && r <= e) {
-            lazy[pos] = data;
+            lazy[pos] += data;
             propagate(l, r, pos);
             return;
         }
