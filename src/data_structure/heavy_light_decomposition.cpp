@@ -9,16 +9,16 @@ struct HLD {
     HLD(Graph<int> G):G(G) {
         int N = (int)G.size();
         siz = par = top = dep = in = out = vector<int>(N);
-        id = -1;
+        id = 0;
     }
     void dfs(int cur=1, int prev=0) {
         siz[cur] = 1;
+        par[cur] = prev;
+        dep[cur] = dep[prev] + 1;
         for(int &nxt : G[cur]) {
             if(nxt == prev) continue;
-            siz[cur] += siz[nxt];
-            par[nxt] = cur;
-            dep[nxt] = dep[cur] + 1;
             dfs(nxt, cur);
+            siz[cur] += siz[nxt];
             if(siz[nxt] > siz[G[cur][0]]) swap(nxt, G[cur][0]);
         }
     }
@@ -28,7 +28,7 @@ struct HLD {
         for(int nxt: G[cur]) {
             if(nxt == prev)continue;
             top[nxt] = (nxt == G[cur][0] ? top[cur] : nxt);
-            dfs(nxt, cur);
+            dfs2(nxt, cur);
         }
         out[cur] = id;
     }
