@@ -1,6 +1,6 @@
 //title: Heavy-Light Decomposition
 //prefix: hld, heavy
-//description: Heavy-Ligth Decomposition Query: O(log^2N)
+//description: Heavy-Ligth Decomposition Query O(log^2N)
 struct HLD {
     Graph<int> G;
     vector<int> par, top, dep, siz, in, out, top;
