@@ -5,7 +5,7 @@ struct UnionFind {
     vector<int> uf, siz;
     UnionFind(int N) {
         uf.resize(N,-1);
-        siz.resize(N,0);
+        siz.resize(N,1);
     }
     int find(int x) { return uf[x] < 0 ? x : uf[x] = find(uf[x]); }
     bool merge(int a, int b) {
