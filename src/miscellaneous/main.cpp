@@ -25,9 +25,9 @@ template<typename T> using Vec = vector<T>;
 template<int fp=0> struct fastio { fastio() { ios::sync_with_stdio(false); cin.tie(0); if(fp)cout<<fixed<<' '<<setprecision(fp); } };
 
 template<typename First, typename Second> inline istream& operator>>(istream &in, pair<First, Second> &_data) { in>>_data.first>>_data.second; return in; }
-template<typename First, typename Second> inline ostream& operator<<(ostream &out, pair<First, Second> &_data) { out<<_data.first<<_data.second; return out; }
+template<typename First, typename Second> inline ostream& operator<<(ostream &out, pair<First, Second> &_data) { out<<_data.first<<' '<<_data.second; return out; }
 template<typename First, typename Second, typename Third> inline istream& operator>>(istream &in, tuple<First, Second, Third> &_data) { in>>get<0>(_data)>>get<1>(_data)>>get<2>(_data); return in; }
-template<typename First, typename Second, typename Third> inline ostream& operator<<(ostream &out, tuple<First, Second, Third> &_data) { out<<get<0>(_data)<<get<1>(_data)<<get<2>(_data); return out; }
+template<typename First, typename Second, typename Third> inline ostream& operator<<(ostream &out, tuple<First, Second, Third> &_data) { out<<get<0>(_data)<<' '<<get<1>(_data)<<' '<<get<2>(_data); return out; }
 
 template<typename InputType> void in(InputType& x) { cin>>x; }
 template<typename InputType, typename... InputTypes> void in(InputType& x, InputTypes& ...y) { cin>>x; in(y...); }
