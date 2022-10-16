@@ -31,11 +31,11 @@ template<typename First, typename Second, typename Third> inline ostream& operat
 
 template<typename InputType> void in(InputType& x) { cin>>x; }
 template<typename InputType, typename... InputTypes> void in(InputType& x, InputTypes& ...y) { cin>>x; in(y...); }
-template<typename IterableInputType> void vin(IterableInputType &V) { for(auto &x: V) cin >> x; }
+template<typename IterableInputType> void vin(IterableInputType &V, int skip=0) { for(auto &x: V) if(--skip < 0) cin >> x; }
 
 template<const int p=0, typename OutputType> void out(OutputType x) { cout<<x<<' '; }
 template<const int p=0, typename OutputType, typename... OutputTypes> void out(OutputType x, OutputTypes ...y) { cout<<fixed<<setprecision(p)<<x<<' '; out<p>(y...); }
-template<const int p=0, typename IterableOutputType> void vout(const IterableOutputType &V) { for(auto &x: V) out<p>(x); }
+template<const int p=0, typename IterableOutputType> void vout(const IterableOutputType &V, int skip=0) { for(auto &x: V) if(--skip<0) out<p>(x); }
 
 template<i64 modulo=numeric_limits<i64>::max(), typename... T> i64 Sum(T... x) { return (... + x) % modulo; }
 template<i64 modulo=numeric_limits<i64>::max(), typename... T> i64 Mul(T... x) { return (... * x) % modulo; }
