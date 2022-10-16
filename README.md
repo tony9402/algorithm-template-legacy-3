@@ -9,6 +9,7 @@
 
 ## String
 - [Suffix Array](src/string/suffix_array.cpp)
+- [Aho Corasick](src/string/aho_corasick.cpp)
 - [KMP](src/string/KMP.cpp)
 - [Hashing](src/string/hashing.cpp)
 
