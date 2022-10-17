@@ -44,7 +44,8 @@ constexpr int dy[] = {-1,1,0,0,-1,-1,1,1,-2,-1,1,2,2,1,-1,-2};
 constexpr int dx[] = {0,0,-1,1,-1,1,-1,1,1,2,2,1,-1,-2,-2,-1}
 
 int main() {
-    fastio();
+    ios::sync_with_stdio(false);
+    cin.tie(0);
 
     int testcase = $1;$2 cin >> testcase;
     while(~--testcase) {
