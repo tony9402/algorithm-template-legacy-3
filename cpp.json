@@ -397,7 +397,7 @@
             "template<i64 modulo=numeric_limits<i64>::max(), typename... T> i64 Mul(T... x) { return (... * x) % modulo; }",
             "",
             "constexpr int dy[] = {-1,1,0,0,-1,-1,1,1,-2,-1,1,2,2,1,-1,-2};",
-            "constexpr int dx[] = {0,0,-1,1,-1,1,-1,1,1,2,2,1,-1,-2,-2,-1}",
+            "constexpr int dx[] = {0,0,-1,1,-1,1,-1,1,1,2,2,1,-1,-2,-2,-1};",
             "",
             "int main() {",
             "    ios::sync_with_stdio(false);",
