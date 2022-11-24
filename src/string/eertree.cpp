@@ -1,4 +1,4 @@
-//title: EER TREE
+//title: EERTREE
 //prefix: eertree, palitree
 //description: EER TREE (https://arxiv.org/pdf/1506.04862.pdf)
 template<typename T = int> struct EERTREE {
