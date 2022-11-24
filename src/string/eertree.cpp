@@ -1,6 +1,6 @@
-//title: EERTREE
+//title: EER TREE
 //prefix: eertree, palitree
-//description: EER TREE (https://arxiv.org/pdf/1506.04862.pdf)
+//description: EER TREE
 template<typename T = int> struct EERTREE {
     struct Node {
         int len, suffix_link;
